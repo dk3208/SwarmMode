@@ -7,8 +7,8 @@ fi
 
 echo Downloading RancherOS ISO
 # TODO: check whether curl or wget is available
-#wget -N https://releases.rancher.com/os/latest/rancheros.iso
-curl -O https://releases.rancher.com/os/latest/rancheros.iso
+wget -N https://releases.rancher.com/os/latest/rancheros.iso
+#curl -O https://releases.rancher.com/os/latest/rancheros.iso
 echo "Creating Master and $1 nodes"
 docker-machine create -d virtualbox --virtualbox-boot2docker-url ./rancheros.iso nodemaster && echo nodemaster >> swarmnodes
 
